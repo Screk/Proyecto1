@@ -1,6 +1,6 @@
 :root {
     --primary: #7c7979;
-    --secondary: #ffffff;
+    --secondary: #e9e9e9;
     --tertiary: #ffffff; 
 }
 
@@ -12,6 +12,10 @@
 
 a {
     text-decoration: none;
+}
+
+li {
+    list-style-type: none;
 }
 
 header {
@@ -101,12 +105,12 @@ nav > input {
 
 main {
     margin-top: 8rem;
-    height: 85vh;
     display: flex;
     flex-direction: column;
 }
 
 .first_section {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,10 +137,10 @@ main {
     margin: 5rem;
     font-size: 15px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .ofertas_top > a {
@@ -148,6 +152,76 @@ main {
     text-align: center;
     color: var(--primary);
 }
+
+.second_section {
+    background-color: var(--secondary);
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.first_article {
+    height: 70%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.first_article > button {
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: rgb(252, 101, 46);
+    color: var(--tertiary);
+    border: 0px;
+}
+
+.first_article > button:hover {
+    background-color: rgb(170, 70, 34);
+}
+
+
+.second_article {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    gap: 1rem;
+
+}
+
+.second_article_ul1 {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;;
+}
+
+.second_article_ul1 > li > a:hover {
+    text-decoration: underline;
+}
+
+.second_article_ul2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+
+}
+
+.second_article_ul2 > li {
+    background-color: var(--tertiary);
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.second_article_ul2 > li > a > img {
+    width: 200px;
+}
+
 @media screen and ( max-width: 1000px) {
     .nav_div > a >p {
         display: none;
