@@ -1,3 +1,9 @@
+:root {
+    --primary: #7c7979;
+    --secondary: #ffffff;
+    --tertiary: #ffffff; 
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -42,7 +48,9 @@ nav > input {
     gap: 1rem;
 }
 
-
+.nav_div > a {
+    color: var(--primary);
+}
 
 .Compromisos {
     display: flex;
@@ -84,6 +92,7 @@ nav > input {
 .header_div > button {
     background-color: white;
     border: 0px solid white;
+    color: var(--primary);
 }
 
 .header_div > button:hover {
@@ -95,6 +104,13 @@ main {
     height: 85vh;
     display: flex;
     flex-direction: column;
+}
+
+.first_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .oferta_top {
@@ -115,7 +131,6 @@ main {
 .ofertas_top {
     width: 80%;
     margin: 5rem;
-    padding-left: 8rem;
     font-size: 15px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -131,6 +146,7 @@ main {
 
 .ofertas_top > a > p {
     text-align: center;
+    color: var(--primary);
 }
 @media screen and ( max-width: 1000px) {
     .nav_div > a >p {
@@ -148,6 +164,13 @@ main {
 
     nav > input {
         display: none;
+    }
+    .oferta_top > a > img {
+        width: 23rem;
+    }
+
+    .ofertas_top {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
     }
 }
 
