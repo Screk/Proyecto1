@@ -8,6 +8,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto Mono', monospace;
 }
 
 a {
@@ -66,6 +67,10 @@ nav > input {
     width: 25px;
 }
 
+.Compromisos > p {
+    font-size: 12px;
+}
+
 .Mi_cuenta {
     display: flex;
     justify-content: center;
@@ -76,6 +81,10 @@ nav > input {
     width: 25px;
 }
 
+.Mi_cuenta > p {
+    font-size: 12px;
+}
+
 .Mi_cesta {
     display: flex;
     justify-content: center;
@@ -84,6 +93,10 @@ nav > input {
 
 .Mi_cesta > img {
     width: 23px;
+}
+
+.Mi_cesta > p {
+    font-size: 12px;
 }
 
 .header_div {
@@ -151,6 +164,7 @@ main {
 .ofertas_top > a > p {
     text-align: center;
     color: var(--primary);
+    font-size: 13px;
 }
 
 .second_section {
@@ -164,7 +178,7 @@ main {
 
 .first_article {
     height: 70%;
-    width: 15%;
+    width: 20%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -199,27 +213,40 @@ main {
     justify-content: center;;
 }
 
+.second_article_ul1 > li > a {
+    font-size: 13px;
+}
+
 .second_article_ul1 > li > a:hover {
-    text-decoration: underline;
+    text-decoration: underline 2px ;
 }
 
 .second_article_ul2 {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 200px));
     gap: 20px;
 
 }
 
 .second_article_ul2 > li {
     background-color: var(--tertiary);
+    width: 100%;
     text-align: center;
     border-radius: 20px;
-    padding: 10px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .second_article_ul2 > li > a > img {
-    width: 200px;
+    width: 80%;
+}
+
+.first_p {
+    color: var(--primary);
+    font-size: 12px;
+}
+
+.second_p {
+    color: rgb(255, 66, 66);
 }
 
 @media screen and ( max-width: 1000px) {
@@ -245,6 +272,26 @@ main {
 
     .ofertas_top {
         grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    }
+
+    .second_section {
+        flex-direction: column;
+    }
+
+    .first_article {
+        width: 80vw;
+        justify-content: center;
+    }
+
+
+    .second_article_ul2 {
+        grid-template-columns: repeat(2, minmax(80%, 1fr));
+        width: 200px;
+        border: 2px solid red;
+    }
+    
+    .second_article_ul2 > li {
+        width: 50%;
     }
 }
 
