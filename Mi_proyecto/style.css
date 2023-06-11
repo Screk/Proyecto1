@@ -19,6 +19,7 @@ li {
     list-style-type: none;
 }
 
+
 header {
     background-color: white;
     width: 100%;
@@ -208,8 +209,9 @@ main {
 }
 
 .second_article_ul1 {
-    display: flex;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
     justify-content: center;;
 }
 
@@ -249,6 +251,53 @@ main {
     color: rgb(255, 66, 66);
 }
 
+.third_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.third_section_ul {
+    margin-top: 50px;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+    align-items: center;
+    gap: 2rem;
+}
+ 
+.third_section_ul > li > a > img {
+    width: 60px;
+}
+
+.third_section_ul > li > a > p {
+    font-size: 12px;
+}
+
+.third_section_article {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.third_section_article > h3 {
+    margin-left: 25rem;
+}
+
+.third_section_ul2 {
+    width: 100vw;
+    margin-left: 25rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 2rem;
+}
+
+.third_section_ul2 > li > a > img {
+    width: 150px;
+}
+
 @media screen and ( max-width: 1000px) {
     .nav_div > a >p {
         display: none;
@@ -268,6 +317,7 @@ main {
     }
     .oferta_top > a > img {
         width: 23rem;
+        height: 10rem;
     }
 
     .ofertas_top {
@@ -276,22 +326,38 @@ main {
 
     .second_section {
         flex-direction: column;
+        height: 100vh;
+        width: 100vw;
     }
 
     .first_article {
         width: 80vw;
-        justify-content: center;
+    }
+
+    .second_article {
+        margin-right: 70px;
+    }
+
+    .second_article_ul1 {
+        width: 100vw;
+    }
+
+    .second_article_ul1 > li {
+        width: 100px;
     }
 
 
     .second_article_ul2 {
-        grid-template-columns: repeat(2, minmax(80%, 1fr));
-        width: 200px;
-        border: 2px solid red;
+        grid-template-columns: repeat(2, minmax(50%, 1fr));
+        width: 300px;
     }
     
     .second_article_ul2 > li {
-        width: 50%;
+        width: 100%;
+    }
+
+    .third_section_ul {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
     }
 }
 
