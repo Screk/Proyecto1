@@ -217,6 +217,7 @@ main {
 
 .second_article_ul1 > li > a {
     font-size: 13px;
+    color: var(--primary);
 }
 
 .second_article_ul1 > li > a:hover {
@@ -266,6 +267,14 @@ main {
     align-items: center;
     gap: 2rem;
 }
+
+.third_section_ul2 > li > a {
+    color: var(--primary);
+}
+
+.third_section_ul2 > li > a:hover {
+    text-decoration: underline;
+} 
  
 .third_section_ul > li > a > img {
     width: 60px;
@@ -273,6 +282,7 @@ main {
 
 .third_section_ul > li > a > p {
     font-size: 12px;
+    color: var(--primary);
 }
 
 .third_section_article {
@@ -296,6 +306,35 @@ main {
 
 .third_section_ul2 > li > a > img {
     width: 150px;
+}
+
+.fourth_section {
+    height: 50vh;
+    width: 100vw;
+    background-color: #d8d8d8;
+}
+
+.fourth_section_ul {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem;
+    gap: 2rem;
+}
+
+.fourth_section_ul > li {
+    border-bottom: 1px solid gray;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.fourth_section_ul > li > a:hover {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+.fourth_section_ul > li > a > h4 {
+    color: var(--primary);
 }
 
 @media screen and ( max-width: 1000px) {
@@ -356,8 +395,21 @@ main {
         width: 100%;
     }
 
+    .third_section {
+        height: 220vh;
+    }
+
     .third_section_ul {
         grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+
+    .third_section_ul2 {
+        grid-template-columns: repeat(2, minmax(20px, 1fr));
+        width:20rem;
+    }
+
+    .third_section_article {
+        margin-right: 400px;
     }
 }
 
