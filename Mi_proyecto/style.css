@@ -166,7 +166,7 @@ main {
     margin: 4rem;
     font-size: 15px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    grid-template-columns: repeat(6, minmax(170px, 1fr));
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -313,7 +313,7 @@ main {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(6, minmax(150px, 1fr));
     gap: 2rem;
 }
 
