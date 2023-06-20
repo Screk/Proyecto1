@@ -8,7 +8,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Mono', monospace; 
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -17,6 +19,15 @@ a {
 
 li {
     list-style-type: none;
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--primary);
+}
+
+p {
+    color: var(--primary);
+    font-size: 12px;
 }
 
 
@@ -82,9 +93,6 @@ nav > input {
     width: 25px;
 }
 
-.Mi_cuenta > p {
-    font-size: 12px;
-}
 
 .Mi_cesta {
     display: flex;
@@ -125,6 +133,7 @@ main {
 
 .first_section {
     height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,7 +141,9 @@ main {
 }
 
 .oferta_top {
+    height: 300px;
     display: flex;
+    align-items: center;
     margin: 4rem;
 }
 
@@ -143,12 +154,15 @@ main {
 }
 
 .oferta_top > a > img {
-    width: 90%;
+    width: 80%;
+    height: 100%;
+    overflow-y: hidden;
 }
 
 .ofertas_top {
     width: 80%;
-    margin: 5rem;
+    height: 300px;
+    margin: 4rem;
     font-size: 15px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
@@ -164,8 +178,6 @@ main {
 
 .ofertas_top > a > p {
     text-align: center;
-    color: var(--primary);
-    font-size: 13px;
 }
 
 .second_section {
@@ -209,6 +221,7 @@ main {
 }
 
 .second_article_ul1 {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 1rem;
@@ -228,12 +241,16 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 200px));
     gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
 
 }
 
 .second_article_ul2 > li {
     background-color: var(--tertiary);
     width: 100%;
+    height: 250px;
     text-align: center;
     border-radius: 20px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
@@ -243,10 +260,6 @@ main {
     width: 80%;
 }
 
-.first_p {
-    color: var(--primary);
-    font-size: 12px;
-}
 
 .second_p {
     color: rgb(255, 66, 66);
@@ -256,7 +269,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    height: 120vh;
+    width: 100vw;
+    gap: 5rem;
 }
 
 .third_section_ul {
@@ -280,11 +296,6 @@ main {
     width: 60px;
 }
 
-.third_section_ul > li > a > p {
-    font-size: 12px;
-    color: var(--primary);
-}
-
 .third_section_article {
     margin-top: 5rem;
     display: flex;
@@ -293,13 +304,14 @@ main {
 }
 
 .third_section_article > h3 {
-    margin-left: 25rem;
+    margin-left: 2rem;
 }
 
 .third_section_ul2 {
-    width: 100vw;
-    margin-left: 25rem;
+    width: 80vw;
     display: grid;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 2rem;
 }
@@ -309,12 +321,17 @@ main {
 }
 
 .fourth_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50vh;
     width: 100vw;
     background-color: #d8d8d8;
+    overflow-y: hidden;
 }
 
 .fourth_section_ul {
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: 5rem;
@@ -333,9 +350,6 @@ main {
     color: var(--primary);
 }
 
-.fourth_section_ul > li > a > h4 {
-    color: var(--primary);
-}
 
 @media screen and ( max-width: 1000px) {
     .nav_div > a >p {
@@ -354,45 +368,61 @@ main {
     nav > input {
         display: none;
     }
+
+    .oferta_top {
+        height: 200px;
+        width: 100%;
+    }
+
     .oferta_top > a > img {
-        width: 23rem;
-        height: 10rem;
+        width: 100%;
+        height: 8rem;
     }
 
     .ofertas_top {
         grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        height: 400px;
     }
 
     .second_section {
         flex-direction: column;
-        height: 100vh;
+        height: 150vh;
         width: 100vw;
     }
 
     .first_article {
         width: 80vw;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
     }
 
     .second_article {
-        margin-right: 70px;
+        width: 100vw;
+        align-items: center;
     }
 
     .second_article_ul1 {
-        width: 100vw;
+        width: 200px;
+        height: 300px;
+        align-items: center;
+        justify-content: center;
     }
 
     .second_article_ul1 > li {
-        width: 100px;
+        width: 100%;
     }
 
 
     .second_article_ul2 {
-        grid-template-columns: repeat(2, minmax(50%, 1fr));
-        width: 300px;
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        width: 100%;
+        height: 100%;
+        padding-left: 2rem;
     }
     
     .second_article_ul2 > li {
-        width: 100%;
+        width: 150px;
     }
 
     .third_section {
@@ -401,6 +431,9 @@ main {
 
     .third_section_ul {
         grid-template-columns: repeat(2, minmax(100px, 1fr));
+        justify-content: center;
+        align-items: center;
+        padding-left: 2rem;
     }
 
     .third_section_ul2 {
@@ -408,9 +441,6 @@ main {
         width:20rem;
     }
 
-    .third_section_article {
-        margin-right: 400px;
-    }
 }
 
 @media screen and (min-width: 1000px){
